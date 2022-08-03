@@ -1,0 +1,108 @@
+¿Qué es una variable y para qué sirve?
+    Una variable es un espacio reservado en la memoria que sirve para guardar y manipular datos
+¿Cuál es la diferencia entre declarar e inicializar una variable?
+    Declarar una variable es cuando le damos un nombre para reservar un espacio en la memoria, y el inicializarlo es cuando le damos un valor a esa variable, un dato, un objeto, una funcion, etc.
+
+¿Cuál es la diferencia entre sumar números y concatenar strings?
+    Sumar es una operacion matematica, concatenar es agregar mas texto a una cadena de texto
+
+¿Cuál operador me permite sumar o concatenar?
+    El signo de + 
+
+    Determina el nombre y tipo de dato para almacenar en variables la siguiente información:
+Nombre: String
+Apellido: String
+Nombre de usuario en Platzi: String
+Edad: Number
+Correo electrónico: String
+Mayor de edad: Boolean
+Dinero ahorrado: number
+Deudas: number
+
+ Traduce a código JavaScript las variables del ejemplo anterior y deja tu código en los comentarios.
+
+ var nombre = "Fabrizio"
+ var apellido = "Lezcano"
+ var Usuario = "Fabrilez01"
+ var Edad = 21
+ var correo = "fabrizio@gmail.com"
+ var mayorDeEdad = edad > 18 ? true : false
+ var ahorro = 21546846
+ var deudas = 4111658
+
+
+  Calcula e imprime las siguientes variables a partir de las variables del ejemplo anterior:
+Nombre completo (nombre y apellido)
+Dinero real (dinero ahorrado menos deudas)
+
+var nombreCompleto = nombre + " " + apellido;
+var dineroReal = ahorro - deudas
+console.log("Hola " + nombreCompleto + " Tu dinero real es: " + dineroReal)
+
+
+Funciones
+1️⃣ Responde las siguientes preguntas en la sección de comentarios:
+¿Qué es una función?
+    Una funcion es un template de codigo
+¿Cuándo me sirve usar una función en mi código?
+    Cuando queremos ejecutar varias veces un mismo codigo, en lugar de estar escribiendolo una y otra vez hacemos una funcion que ejecute ese mismo codigo cada que lo necesitemos
+¿Cuál es la diferencia entre parámetros y argumentos de una función?
+    Los paramentros son los datos que debe de recibir una funcion al declararla, los argumentos son ya los datos que le pasamos a la funcion para que empiece a ejecutar su codigo.
+
+    2️⃣ Convierte el siguiente código en una función, pero, cambiando cuando sea necesario las variables constantes por parámetros y argumentos en una función:
+const name = "Juan David";
+const lastname = "Castro Gallego";
+const completeName = name + lastname;
+const nickname = "juandc";
+
+console.log("Mi nombre es " + completeName + ", pero prefiero que me digas " + nickname + ".");
+
+    function presentacion(nombre, apellido, nickname){
+        completeName = nombre + " " + apellido;
+        console.log("Mi nombre es " + completeName + ", pero prefiero que me digas " + nickname + ".");
+    }
+
+    presentacion("Fabrizio", "Lezcano", "Fabri");
+
+    Condicionales
+1️⃣ Responde las siguientes preguntas en la sección de comentarios:
+¿Qué es un condicional?
+    Es una estructura de control que nos permite validar datos, y dependiendo de si la validacion sea verdadera o falsa, ejecutar una instruccion definida para cada caso.
+¿Qué tipos de condicionales existen en JavaScript y cuáles son sus diferencias?
+    If, ifelse, Case,
+    If nos permite hace una primera validacion en donde si nuestra pregunta es verdadera se ejecuta la primera instruccion, sino es verdadera se ejecuta un default, poniendo else luego de terminar el if.
+    Ifelse nos permite concatenar varios if en caso de que necesitemos realizar varias validaciones
+    Case es mejor para realizar varias validaciones de una forma mas corta
+¿Puedo combinar funciones y condicionales?
+    Si, se pueden combinar
+
+    2️⃣ Replica el comportamiento del siguiente código que usa la sentencia switch utilizando if, else y else if:
+const tipoDeSuscripcion = "Basic";
+
+switch (tipoDeSuscripcion) {
+   case "Free":
+       console.log("Solo puedes tomar los cursos gratis");
+       break;
+   case "Basic":
+       console.log("Puedes tomar casi todos los cursos de Platzi durante un mes");
+       break;
+   case "Expert":
+       console.log("Puedes tomar casi todos los cursos de Platzi durante un año");
+       break;
+   case "ExpertPlus":
+       console.log("Tú y alguien más pueden tomar TODOS los cursos de Platzi durante un año");
+       break;
+}
+
+
+const = tipoDeSuscripcion = "Basic"
+
+if(tipoDeSuscripcion === "Free"){
+    console.log(""Solo puedes tomar los cursos gratis de Platzi);
+} else if (tipoDeSuscripcion ==== "Basic"){
+    console.log("Puedes tomar casi todos los cursos de Platzi durante un mes");
+}else if (tipoDeSuscripcion === "Expert"){
+    console.log("Puedes tomar casi todos los cursos de Platzi durante un año");
+}else {
+    console.log("Tú y alguien más pueden tomar TODOS los cursos de Platzi durante un año");
+}
